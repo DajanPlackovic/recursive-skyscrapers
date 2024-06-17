@@ -6,33 +6,45 @@ char *parse(char out[6][6], char *str)
 	i = 0;
 	while (i < 4)
 	{
-		out[0][i + 1] = *str;
+		if (*str >= '1' && *str <= '9')
+		{
+			out[0][i + 1] = *str;
+			i++;
+		}
 		str++;
-		i++;
 	}
 
 	i = 0;
 	while (i < 4)
 	{
-		out[5][i + 1] = *str;
+		if (*str >= '1' && *str <= '9')
+		{
+			out[5][i + 1] = *str;
+			i++;
+		}
 		str++;
-		i++;
 	}
 
 	i = 0;
 	while (i < 4)
 	{
-		out[i + 1][0] = *str;
+		if (*str >= '1' && *str <= '9')
+		{
+			out[i + 1][0] = *str;
+			i++;
+		}
 		str++;
-		i++;
 	}
 
 	i = 0;
 	while (i < 4)
 	{
-		out[i + 1][5] = *str;
+		if (*str >= '1' && *str <= '9')
+		{
+			out[i + 1][5] = *str;
+			i++;
+		}
 		str++;
-		i++;
 	}
 
 	i = 1;
