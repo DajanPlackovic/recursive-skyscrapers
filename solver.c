@@ -6,7 +6,7 @@ int recursive_solve(char grid[6][6], int row, int column, int checker[4])
 {
 	char i;
 
-	while (((row < 1 || row > 4) || (column < 1 || column > 4)) || grid[row][column] != '0')
+	while (grid[row][column] != '0')
 	{
 		column++;
 		if (column == 5)
@@ -35,5 +35,5 @@ int solve(char grid[6][6])
 {
 	int checker[4];
 
-	return recursive_solve(grid, 0, 0, checker);
+	return recursive_solve(grid, 1, 1, checker);
 }
