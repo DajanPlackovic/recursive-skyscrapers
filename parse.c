@@ -1,4 +1,4 @@
-char *parse(char out[6][6], char *str)
+void	parse(char out[6][6], char *str)
 {
 	int i;
 	int j;
